@@ -1,0 +1,26 @@
+<h1>GeekTwitter</h1>
+<h3>Song詳細</h3>
+<div class="song">
+  <p><%= @song.title %></p>
+  <p><%= @song.created_at %></p>
+    <% if user_signed_in? %>
+      <% if current_user.already_liked?(@song) %>
+        <%= link_to song_like_path(@song), method: :delete do %>
+            <i class="fas fa-heart"></i><%= @song.likes.count %>
+        <% end %>
+      <% else %>
+        <%= link_to song_likes_path(@song), method: :post do %>
+            <i class="far fa-heart"></i><%= @song.likes.count %>
+        <% end %>
+       <% end %>
+      <% else %>
+       <i class="far fa-heart"></i><%= @song.likes.count %>
+      <% end %>
+ < %= link_to "編集する", edit_song_path(@song.id) %>
+</div>
+
+<h2>いいねしたユーザー</h2>
+<% @song.liked_users.each do |user| %>
+    <li><%= user.email %></li>
+<% end %>
+

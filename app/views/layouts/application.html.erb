@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <!--いいね機能について-->
+    <script src="https://kit.fontawesome.com/~~~~~~"  crossorigin="anonymous"></script> 
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+  <h1>music</h1>
+  <div class="header-list">
+  <ul>
+    <li><%= link_to "トップページ", songs_path %></li>
+    <li><%= link_to "気分診断", perfumes_path %></li>
+    <% if user_signed_in? %>
+    <li><%= link_to "マイページ", user_path(current_user.id) %></li>
+    <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+    <li><%= link_to "新規投稿",new_song_path %></li>
+    <% else %>
+    <li><%= link_to "ログイン", new_user_session_path %></li>
+    <li><%= link_to "新規登録", new_user_registration_path %></li>
+    <% end %>
+    
+  </ul>
+  </div>
+</header>
+<main>
+  <%= yield %>
+</main>
+<footer>
+      <p>Copyright © 遠藤琉世 All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

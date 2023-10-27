@@ -1,0 +1,33 @@
+<h1>(自分の題名)</h1>
+<h3>新規投稿ページ</h3>
+<%= form_for @song do |f| %>
+  <%= f.label :youtube_url %>
+  　<%= f.text_field :youtube_url, :size => 140 %>
+
+    <div class="field">
+    <%= f.label :曲名 %>
+    <%= f.text_field :title, :size => 30 %>
+    </div>
+
+  <div class="field">
+    <%= f.label :アーティスト %>
+    <%= f.text_field :name, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ジャンル  %>
+    <%= f.select :genre, 
+    [["A", "A"], 
+    ["B", "B"], 
+    ["C", "C"]], include_blank: "選択して下さい" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :コメント  %>
+    <%= f.text_area :comment, :size => "30x2" %>
+  </div>
+
+  <%= f.submit "投稿する" %>
+<% end %>  
+
