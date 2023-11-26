@@ -1,4 +1,5 @@
-<h1>users#show</h1>
+
+<div class="totaro">
 <p>名前 : <%= @user.name %></p>
 <p><%= image_tag @user.image_url, size: "250x200" if @user.image? %></p>
 <p>メールアドレス : <%= @user.email %></p>
@@ -9,17 +10,21 @@
 <% end %>
 
 <h2>ユーザーの投稿一覧</h2>
+<br> 
 <% @user.songs.each do |t| %>
   <%= t.user.name %>
   <%= t.title %>
+  <%= button_to "削除する", song_path(t.id), method: :delete %>
 <% end %> 
 
 <!-- 以下はいいね機能を実装している場合-->
 <h2>ユーザーがいいねした投稿一覧</h2>
+<br>
 <% @user.liked_songs.each do |t| %>
   <%= t.user.name %>
   <%= t.title %>
 <% end %>
 <!-- ここまで-->
-
-<%= link_to "Song一覧に戻る", songs_path %>
+<br>
+<%= link_to "トップページに戻る", songs_path %>
+</div>

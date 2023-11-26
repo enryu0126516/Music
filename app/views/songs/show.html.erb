@@ -10,11 +10,11 @@
         <% end %>
       <% else %>
         <%= link_to song_likes_path(@song), method: :post do %>
-            <i class="far fa-heart"></i><%= @song.likes.count %>
+          <i class="fa-regular fa-heart"></i></i><%= @song.likes.count %>
         <% end %>
        <% end %>
       <% else %>
-       <i class="far fa-heart"></i><%= @song.likes.count %>
+      <i class="fa-regular fa-heart"></i></i><%= @song.likes.count %>
       <% end %>
  < %= link_to "編集する", edit_song_path(@song.id) %>
 </div>

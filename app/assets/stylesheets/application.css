@@ -20,12 +20,13 @@
   body {
     background-color: #000000;
     color: #fff;
-    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
-      Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+    font-family: 'IBM Plex Sans JP', sans-serif;
+font-family: 'Shippori Mincho B1', serif;
+letter-spacing: 8px;
   }
   header {
     background-color: #07d819;
-    height: 80px;
+    height: 120px;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
@@ -51,7 +52,7 @@
     margin-right: 40px;
   }
   body {
-    margin-bottom: 40%;
+    margin-bottom: 5%;
   }
   footer {
     color: #fff;
@@ -64,3 +65,17 @@
     position: fixed;
     justify-content: flex-end;
   }
+
+  .header_menu_top{
+    width: 100px;
+    height: 100px;
+    border-radius: 90px;
+    cursor :pointer;
+    float: left;
+    background-image: url('rogo.png');
+    background-size: cover;
+    padding: 5px;
+    margin-right: 50px;
+}
+
+

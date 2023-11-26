@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+
     <title>Music</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <!--いいね機能について-->
-    <script src="https://kit.fontawesome.com/~~~~~~"  crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/116ddc6897.js" crossorigin="anonymous"></script> 
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -15,8 +19,11 @@
 
   <body>
   <header>
-  <h1>music</h1>
+  <h1><%= link_to songs_path do %>
+    <div class="header_menu_top"></div>
+  <% end %></h1>
   <div class="header-list">
+  
   <ul>
     <li><%= link_to "トップページ", songs_path %></li>
     <li><%= link_to "気分診断", perfumes_path %></li>
@@ -36,7 +43,8 @@
   <%= yield %>
 </main>
 <footer>
-      <p>Copyright © 遠藤琉世 All Rights Reserved.</p>
+    R
     </footer>
   </body>
 </html>
+

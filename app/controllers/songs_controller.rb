@@ -4,18 +4,19 @@ class SongsController < ApplicationController
      end
      
      def index
-      if params[:search] == nil
-        @songs= Song.all
-      elsif params[:search] == ''
-        @songs= Song.all
-      else
-        #部分検索
-        @songs = Song.where("title LIKE ? ",'%' + params[:search] + '%')
-      end
+      @Songs = Song.all.order(created_at: :desc)
+        if params[:search] == nil
+            @songs= Song.all.order(created_at: :desc)
+         elsif params[:search] == ''
+            @songs= Song.all
+         else
+            @songs= Song.where("title LIKE ? OR name LIKE ? OR genre LIKE ?",'%' + params[:search] + '%','%' + params[:search] + '%' ,'%' + params[:search] + '%')
+         end
+         @rank_songs = Song.all.sort {|a,b| b.liked_users.count <=> a.liked_users.count}
+         @songs = @songs.page(params[:page]).per(6)
+         @rank_songs = Kaminari.paginate_array(@rank_songs).page(params[:page]).per(10)
 
-      @rank_songs = Song.all.sort {|a,b| b.liked_users.count <=> a.liked_users.count}.first(50)
-
-    end
+     end
 
 
      def new
@@ -32,14 +33,20 @@ class SongsController < ApplicationController
         end
       end
 
+      def destroy
+        song = Song.find(params[:id])
+        song.destroy
+        redirect_to action: :index
+      end
+
       
 
       private
       def song_params
-        params.require(:song).permit(:name, :title, :genre, :coment, :day, :youtube_url, :question)
+        params.require(:song).permit(:name, :title, :genre, :coment, :day, :youtube_url, :question, :body)
       end
 
 
 
 
-end
+    end

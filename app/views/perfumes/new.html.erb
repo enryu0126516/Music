@@ -1,48 +1,48 @@
+<div class="sindan">
 <%= form_for(@perfume, class: 'form-horizontal', role: 'form') do |f| %>
-    <div class="container-sindan">
-        <div class="row">
-            <div class="col-12">
-                <p>Question1. どちらかと言うと…</p>
-            </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "1", nil %>じっくり考える方だ</p>
-            </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "2", nil %>考えるより行動する方だ</p>
-            </div>
+    <div class="perfume-container">
+        <div class="col-12">
+            <p>Q1. 今の気分は…</p>
+        </div>
+        <div class="col-6">
 
-            <div class="col-12">
-                <p>Question2. 自分の価値観として近い方は…</p>
-            </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "1", nil %>周りの人と違う存在でありたい</p>
-            </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "2", nil %>周りと同じでいたい</p>
-            </div>
 
-            <div class="col-12">
-                <p>Question3. 人と接するときは…</p>
-            </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "1", nil %>相手の話をよく聞く方だ</p>
-            </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "2", nil %>自分の話をよくする方だ</p>
-            </div>
-
-            <div class="col-12">
-                <p>Question4. 大切にしたいのは…</p>
-            </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "1", nil %>論理性だ</p>
-            </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "2", nil %>情緒だ</p>
-            </div>
+            <%= f.radio_button :question1, "1", id: "custom_id1" %>
+            <label for="custom_id1">＋</label>
+            <%= f.radio_button :question1, "2", id: "custom_id2" %>
+            <label for="custom_id2">－</label>
+        </div>
+        <div class="col-12">
+            <p>Q2. どの時間で音楽をききたい？…</p>
+        </div> 
+        <div class="col-6">
+            <%= f.radio_button :question2, "1", id: "custom_id3" %>
+            <label for="custom_id3">朝</label>
+            <%= f.radio_button :question2, "2", id: "custom_id4" %>
+            <label for="custom_id4">夜</label>
+        </div>   
+        <div class="col-12">
+            <p>Q3. 今日の予定は…</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question3, "1", id: "custom_id5" %>
+            <label for="custom_id5">仕事、学校</label>
+            <%= f.radio_button :question3, "2", id: "custom_id6" %>
+            <label for="custom_id6">遊び、特になし</label>
+        </div>
+    
+        <div class="col-12">
+            <p>Q4. 今求めているものは…</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question4, "1", id: "custom_id7" %>
+            <label for="custom_id7">共感、明るさ</label>
+            <%= f.radio_button :question4, "2", id: "custom_id8" %>
+            <label for="custom_id8">悲しさ、特になし</label>
         </div>
     </div>
     <div class="sindanbotan">
-        <%= f.submit "post" %>
+        <%= f.submit " 結果 " %>
     </div>
 <% end %>
+</div>

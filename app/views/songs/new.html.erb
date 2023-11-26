@@ -1,33 +1,36 @@
-<h1>(自分の題名)</h1>
+<div class="sinki">
 <h3>新規投稿ページ</h3>
 <%= form_for @song do |f| %>
+  <div class="field5">
   <%= f.label :youtube_url %>
   　<%= f.text_field :youtube_url, :size => 140 %>
+  </div>
 
-    <div class="field">
+    <div class="field4">
     <%= f.label :曲名 %>
-    <%= f.text_field :title, :size => 30 %>
+    <%= f.text_field :title, :size => 140 %>
     </div>
 
-  <div class="field">
+  <div class="field3">
     <%= f.label :アーティスト %>
-    <%= f.text_field :name, :size => 30 %>
+    <%= f.text_field :name, :size => 140 %>
   </div>
 
-  <div class="field">
+  <div class="field2">
     <%= f.label :ジャンル  %>
     <%= f.select :genre, 
-    [["A", "A"], 
-    ["B", "B"], 
-    ["C", "C"]], include_blank: "選択して下さい" %>
+    [["テンションが上がる曲", "テンションが上がる曲"], 
+    ["励まされる曲", "励まされる曲"], 
+    ["エモい曲", "エモい曲"],
+    ["恋愛ソング", "恋愛ソング"]], include_blank: "選択して下さい" %>
   </div>
 
 
-  <div class="field">
+  <div class="field1">
     <%= f.label :コメント  %>
     <%= f.text_area :comment, :size => "30x2" %>
   </div>
 
   <%= f.submit "投稿する" %>
 <% end %>  
-
+</div>

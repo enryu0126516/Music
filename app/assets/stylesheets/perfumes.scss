@@ -1,3 +1,65 @@
 // Place all the styles related to the perfumes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.sindan{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 150px;
+
+
+    .col-12 p{
+        text-align: center;
+        font-size: 20px;
+        margin: 30px;
+    }
+    .col-6{
+        justify-content: center;
+        display: flex;
+    }
+    .col-6 input{ 
+        //ラジオボタンを隠す
+        display: none;
+    }
+    .col-6 label{ 
+        //ラベルのデザイン
+        display: block;
+        cursor: pointer;
+        text-align: center;
+        border-right: 1px solid #D7D7D7;
+        background: #E5E5E5;
+        color: #555E64;
+        width: 300px;
+        border-radius: 10px;
+        padding: 10px;
+        transition: .2s;
+    }
+    .col-6 input[type="radio"]:checked + label { 
+        //選択後の配色
+        background-color: #07d819;
+        color: #fff;
+    }
+    
+    .sindanbotan {
+        text-align: center;
+    }
+}
+.kekka{
+    justify-content: center;
+    text-align: center;
+    padding-top: 150px;
+    font-size: xx-large;
+    margin: 10px;
+    color: #07d819;
+   
+}
+.douga{
+    width: 100%;
+    display: flex;
+}
+.minidouga{
+    width: 25%;
+    border: 1px solid #fff;
+}

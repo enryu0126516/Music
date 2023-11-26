@@ -7,5 +7,8 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
   end
   resources :perfumes
-  root 'songs#top'
+  get 'sindanurl'=> 'perfumes#index'
+  get 'myurl'=> 'users#show'
+  get 'sinkiurl'=> 'songs#new'
+  root 'songs#index'
 end

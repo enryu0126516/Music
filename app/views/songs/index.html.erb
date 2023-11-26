@@ -1,30 +1,31 @@
-<h1>自分の題名</h1>
 
 
-<%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
-<h3>一覧ページ</h3>
-
+<div class="toukou">
 <h3>投稿を検索</h3>
-<%= form_tag({controller:"songs",action:"index"}, method: :get) do %>
+<%= form_tag({controller:"songs",action:"index"}, method: :get) do  %>
    <%= text_field_tag :search %>
-   <%= submit_tag '検索する'  %>
+   <%= submit_tag '検索する' %>
  <% end %>
+</div>
 
-<%= link_to "新規投稿へ", new_song_path %>
-
-  <% if user_signed_in? %>
-    <%= link_to "マイページへ", user_path(current_user.id) %>
-  <% end %>
-
+<div class="song">
   <% @songs.each do |t| %>
-    <div class="song">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= find_youtube_url(t.youtube_url) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-    <%= link_to t.user.name, user_path(t.user.id) %>
-      <%= t.name %>
-      <%= t.title %>
-      <%= t.genre %>
-      <%= t.comment %>
-      </div>
+<div class="orikaesi">
+<div class="tikatika">    
+<div class="tika"><iframe width="200" height="200" src="https://www.youtube.com/embed/<%= find_youtube_url(t.youtube_url) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br></div>
+  <ul> 
+  <br>
+   <li> <div class="font0"><%= t.name %></div></li>
+  <br>
+   <li><div class="font1"><%= t.title %></div></li>
+  <br>
+   <li><div class="font2"><%= t.genre %></div><li>
+  <br>
+   <li><div class="font3"><%= t.comment %></div></li>
+  <br>
+   <li><%= link_to t.user.name, user_path(t.user.id) %></li>
+  </ul>
+</div>
 
 
 
@@ -32,7 +33,9 @@
    <% if user_signed_in? %>
        <% if current_user.already_liked?(t) %>
            <%= link_to song_like_path(id: t.id, song_id: t.id), method: :delete do %>
-              <i class="fas fa-heart"></i><%= t.likes.count %>
+            <br> 
+            <i class="fa-regular fa-heart"></i></i><%= t.likes.count %>
+           
            <% end %>
        <% else %>
            <%= link_to song_likes_path(id: t.id, song_id: t.id), method: :post do %>
@@ -40,27 +43,45 @@
            <% end %>
        <% end %>
    <% else %>
-       <i class="far fa-heart"></i><%= t.likes.count %>
+   <i class="fa-regular fa-heart"></i></i><%= t.likes.count %>
    <% end %>
+</div>
    <% end %>
 </div>
 
-<br><h1>ランキング機能</h1>
+<!--以下ページネーション機能-->
+<div class="page">
+<%= paginate @songs %>
+</div>
+
+
+<div class="rankingu">
+<br><h1>いいねランキング</h1>
 <% @rank_songs.each do |t| %>
+  <iframe width="1000" height="400" src="https://www.youtube.com/embed/<%= find_youtube_url(t.youtube_url) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
   <%= t.name %>
     <%= t.title %>
-    <%= t.genre %>
-    <%= t.comment %><br>
-<% end %>  
-<%= link_to "ログイン", songs_path %>
-<%= link_to "新規登録", new_user_registration_path %>
+    <i class="far fa-heart"></i><%= t.likes.count %>
+    
+   <br>
+   
+<% end %> 
+<%= paginate @rank_songs %>
+</div>
 
-<%= link_to "診断機能へ", perfumes_path %>
+<div class="irasuto">
+<a href="sindanurl">
+  <%= image_tag 'kibun.png', class:"image1" %>
+</a>
 
+<a href="/users/<%= current_user.id %>">
+  <%= image_tag 'my.png', class:"image2" %>
+</a>
 
-
-
-
+<a href="sinkiurl">
+  <%= image_tag 'sinki.png', class:"image3" %>
+</a>
+</div>
 
 
 

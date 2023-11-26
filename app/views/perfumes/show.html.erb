@@ -1,91 +1,345 @@
-
-    <div class="intoro">
-    <h5>診断結果</h5>
-    <p>あなたにおすすめの香りは…</p>
-    </div>
-    <div class="tweet-container">
-    <div class="tweet">
-        <% if @perfume.question == "1111" %>
-        <h6>レモン</h6>
-        <p>柑橘系の代表的な原料</p>
-        <p>清涼感があり、爽やかな印象</p>
-    
-        <% elsif @perfume.question == "1112" %>
-        <h6>シトラス</h6>
-        <p>オレンジに似た柑橘系の果物</p>
-        <p>リラックス効果がある</p>
-    
-        <% elsif @perfume.question == "1121" %>
-        <h6>ローズ</h6>
-        <p>華やかで上品な香り</p>
-        <p>ストレスを緩和してくれる効果がある</p>
-    
-        <% elsif @perfume.question == "1122" %>
-        <h6>ラベンダー</h6>
-        <p>優しく女性らしい香り</p>
-        <p>気持ちを落ち着かせてくれる</p>
-    
-        <% elsif @perfume.question == "1211" %>
-        <h6>ジャスミン</h6>
-        <p>爽やかなのに官能的な香り</p>
-        <p>幸福感を得やすい</p>
-    
-        <% elsif @perfume.question == "1212" %>
-        <h6>ピーチ</h6>
-        <p>フレッシュで優しい香り</p>
-        <p>アンチエイジングにも最適</p>
-    
-        <% elsif @perfume.question == "1221" %>
-        <h6>アップル</h6>
-        <p>特徴的で甘い香り</p>
-        <p>万人受けしやすい</p>
-    
-        <% elsif @perfume.question == "1222" %>
-        <h6>ユーカリ</h6>
-        <p>しっかりとした優しい香り</p>
-        <p>浄化作用があり。気持ちを落ち着かせてくれる</p>
-    
-        <% elsif @perfume.question == "2111" %>
-        <h6>ローズマリー</h6>
-        <p>きりりとした強めの香りが特徴的</p>
-        <p>美容効果が高い</p>
-    
-        <% elsif @perfume.question == "2112" %>
-        <h6>ベルガモット</h6>
-        <p>柑橘系の果実</p>
-        <p>甘くてフレッシュな、万能な香料</p>
-    
-        <% elsif @perfume.question == "2121" %>
-        <h6>ムスク</h6>
-        <p>雄のジャコウジカの腹部にある香嚢から抽出した香料</p>
-        <p>官能的で重い香り</p>
-    
-        <% elsif @perfume.question == "2122" %>
-        <h6>アンバー</h6>
-        <p>マッコウクジラの結石から抽出した香料</p>
-        <p>魅惑的で色気のある香り</p>
-    
-        <% elsif @perfume.question == "2211" %>
-        <h6>シナモン</h6>
-        <p>甘いスパイスの香り</p>
-        <p>香水のアクセントとしてよく使われる</p>
-    
-        <% elsif @perfume.question == "2212" %>
-        <h6>バニラ</h6>
-        <p>甘くて官能的な香り</p>
-        <p>上品で年齢を問わず人気が高い</p>
-    
-        <% elsif @perfume.question == "2221" %>
-        <h6>イランイラン</h6>
-        <p>色気のある濃厚で甘い香り</p>
-        <p>恋愛に効果があり</p>
-    
-        <% elsif @perfume.question == "2222" %>
-        <h6>サンダルウッド</h6>
-        <p>お香としてよく使われる白檀の香り</p>
-        <p>集中力を高める効果もあり</p>
-    
-        <% end %>
-    
-    </div>
-    
+<div class="kekka">
+<div class="intoro">
+<h5>診断結果</h5>
+<p>あなたにおすすめの香りは…</p>
+</div>
+<div class="perfume-container">
+<% case [@perfume.question1, @perfume.question2, @perfume.question3, @perfume.question4] %>
+<% when ["1", "1", "1", "1"] %>
+  <h6>テンションが上がる曲</h6>
+  <p>おすすめの曲</p>
+  <div class="douga">
+  <div class="minidouga">
+  <p><%=link_to' ',' https://youtu.be/O_DLtVuiqhI?si=WOGtAeWirMJIIObK'%></p>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/O_DLtVuiqhI?si=WOGtAeWirMJIIObK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="minidouga">
+  <p><%=link_to' ','https://youtu.be/ry_8lmQHzWY?si=vSiIPkjHhGpJX0it'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/ry_8lmQHzWY?si=vSiIPkjHhGpJX0it" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="minidouga">
+  <p><%=link_to' ','https://youtu.be/m34DPnRUfMU?si=EwN43yJ-eJHamBhf'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/m34DPnRUfMU?si=EwN43yJ-eJHamBhf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="minidouga">
+  <p><%=link_to' ','https://youtu.be/xGbxsiBZGPI?si=0WPrFae2FtgSIVDr'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/xGbxsiBZGPI?si=0WPrFae2FtgSIVDr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  </div>
+<% when ["1", "1", "1", "2"] %>
+  <h6>励まされる曲</h6>
+  <p>おすすめの曲</p>
+  <div class="douga">
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/zhCtzmDWsN0?si=M1cEi0z_FAGQp9wB'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/zhCtzmDWsN0?si=mU9wW1qu7n9jEA2n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/cpIa89_rZoA?si=QYPMRvMc1VY6eccI'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/cpIa89_rZoA?si=QYPMRvMc1VY6eccI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/DwTinTO0o9I?si=8k1b8ZIo-_Z0I8pX'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/DwTinTO0o9I?si=8k1b8ZIo-_Z0I8pX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/VZBU8LvZ91Q?si=MlIZDRsDhH3XuRG3'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/VZBU8LvZ91Q?si=MlIZDRsDhH3XuRG3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  </div>
+<% when ["1", "1", "2", "1"] %>
+<h6>テンションが上がる曲</h6>
+<p>おすすめの曲</p>
+<div class="douga">
+<div class="minidouga">
+<p><%=link_to' ',' https://youtu.be/O_DLtVuiqhI?si=WOGtAeWirMJIIObK'%></p>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/O_DLtVuiqhI?si=WOGtAeWirMJIIObK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<p><%=link_to' ','https://youtu.be/ry_8lmQHzWY?si=vSiIPkjHhGpJX0it'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/ry_8lmQHzWY?si=vSiIPkjHhGpJX0it" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<p><%=link_to' ','https://youtu.be/m34DPnRUfMU?si=EwN43yJ-eJHamBhf'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/m34DPnRUfMU?si=EwN43yJ-eJHamBhf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<p><%=link_to' ','https://youtu.be/xGbxsiBZGPI?si=0WPrFae2FtgSIVDr'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/xGbxsiBZGPI?si=0WPrFae2FtgSIVDr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+<% when ["1", "1", "2", "2"] %>
+<h6>エモい曲</h6>
+  <p>おすすめの曲</p>
+  <div class="douga">
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/mH6LoI63buY?si=dm76Tu3JfE4q0ekx'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/mH6LoI63buY?si=dm76Tu3JfE4q0ekx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/GNYdh5k2VDk?si=L-2alRNHS1s0ufI2'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/GNYdh5k2VDk?si=L-2alRNHS1s0ufI2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/qucqaX8AHeg?si=RAtLQInnI4h-3Ngf'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/qucqaX8AHeg?si=RAtLQInnI4h-3Ngf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/7HgJIAUtICU?si=vbgqbExnQS9gAcrg'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/7HgJIAUtICU?si=vbgqbExnQS9gAcrg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  </div>
+<% when ["1", "2", "1", "1"] %>
+<h6>励まされる曲</h6>
+<p>おすすめの曲</p>
+<div class="douga">
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/zhCtzmDWsN0?si=M1cEi0z_FAGQp9wB'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/zhCtzmDWsN0?si=mU9wW1qu7n9jEA2n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/cpIa89_rZoA?si=QYPMRvMc1VY6eccI'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/cpIa89_rZoA?si=QYPMRvMc1VY6eccI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/DwTinTO0o9I?si=8k1b8ZIo-_Z0I8pX'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/DwTinTO0o9I?si=8k1b8ZIo-_Z0I8pX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/VZBU8LvZ91Q?si=MlIZDRsDhH3XuRG3'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/VZBU8LvZ91Q?si=MlIZDRsDhH3XuRG3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+<% when ["1", "2", "1", "2"] %>
+<h6>エモい曲</h6>
+  <p>おすすめの曲</p>
+  <div class="douga">
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/mH6LoI63buY?si=dm76Tu3JfE4q0ekx'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/mH6LoI63buY?si=dm76Tu3JfE4q0ekx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/GNYdh5k2VDk?si=L-2alRNHS1s0ufI2'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/GNYdh5k2VDk?si=L-2alRNHS1s0ufI2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/qucqaX8AHeg?si=RAtLQInnI4h-3Ngf'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/qucqaX8AHeg?si=RAtLQInnI4h-3Ngf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/7HgJIAUtICU?si=vbgqbExnQS9gAcrg'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/7HgJIAUtICU?si=vbgqbExnQS9gAcrg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  </div>
+<% when ["1", "2", "2", "1"] %>
+<h6>テンションが上がる曲</h6>
+<p>おすすめの曲</p>
+<div class="douga">
+<div class="minidouga">
+<p><%=link_to' ',' https://youtu.be/O_DLtVuiqhI?si=WOGtAeWirMJIIObK'%></p>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/O_DLtVuiqhI?si=WOGtAeWirMJIIObK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<p><%=link_to' ','https://youtu.be/ry_8lmQHzWY?si=vSiIPkjHhGpJX0it'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/ry_8lmQHzWY?si=vSiIPkjHhGpJX0it" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<p><%=link_to' ','https://youtu.be/m34DPnRUfMU?si=EwN43yJ-eJHamBhf'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/m34DPnRUfMU?si=EwN43yJ-eJHamBhf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<p><%=link_to' ','https://youtu.be/xGbxsiBZGPI?si=0WPrFae2FtgSIVDr'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/xGbxsiBZGPI?si=0WPrFae2FtgSIVDr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+<% when ["1", "2", "2", "2"] %>
+  <h6>エモい曲</h6>
+  <p>おすすめの曲</p>
+  <div class="douga">
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/mH6LoI63buY?si=dm76Tu3JfE4q0ekx'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/mH6LoI63buY?si=dm76Tu3JfE4q0ekx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/GNYdh5k2VDk?si=L-2alRNHS1s0ufI2'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/GNYdh5k2VDk?si=L-2alRNHS1s0ufI2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/qucqaX8AHeg?si=RAtLQInnI4h-3Ngf'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/qucqaX8AHeg?si=RAtLQInnI4h-3Ngf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="minidouga">
+  <%=link_to' ','https://youtu.be/7HgJIAUtICU?si=vbgqbExnQS9gAcrg'%>
+  <iframe width="180" height="180" src="https://www.youtube.com/embed/7HgJIAUtICU?si=vbgqbExnQS9gAcrg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+<% when ["2", "1", "1", "1"] %>
+<h6>励まされる曲</h6>
+<p>おすすめの曲</p>
+<div class="douga">
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/zhCtzmDWsN0?si=M1cEi0z_FAGQp9wB'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/zhCtzmDWsN0?si=mU9wW1qu7n9jEA2n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/cpIa89_rZoA?si=QYPMRvMc1VY6eccI'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/cpIa89_rZoA?si=QYPMRvMc1VY6eccI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/DwTinTO0o9I?si=8k1b8ZIo-_Z0I8pX'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/DwTinTO0o9I?si=8k1b8ZIo-_Z0I8pX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/VZBU8LvZ91Q?si=MlIZDRsDhH3XuRG3'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/VZBU8LvZ91Q?si=MlIZDRsDhH3XuRG3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+<% when ["2", "1", "1", "2"] %>
+<h6>恋愛ソング</h6>
+<p>おすすめの曲</p>
+<div class="douga">
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/Euf1-3WRino?si=BpgqlrR7uYzB5H_Y'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/Euf1-3WRino?si=BpgqlrR7uYzB5H_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/naz0-szzYXk?si=SuP6SwJijIvZc7cA'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/naz0-szzYXk?si=SuP6SwJijIvZc7cA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/U8pJgoOhiDs?si=Hkgq6ysbs0xzPtB8'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/U8pJgoOhiDs?si=Hkgq6ysbs0xzPtB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/T8y_RsF4TSw?si=kTPggq7BRo-feOZz'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/T8y_RsF4TSw?si=kTPggq7BRo-feOZz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+<% when ["2", "1", "2", "1"] %>
+<h6>テンションが上がる曲</h6>
+<p>おすすめの曲</p>
+<div class="douga">
+<div class="minidouga">
+<p><%=link_to' ',' https://youtu.be/O_DLtVuiqhI?si=WOGtAeWirMJIIObK'%></p>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/O_DLtVuiqhI?si=WOGtAeWirMJIIObK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<p><%=link_to' ','https://youtu.be/ry_8lmQHzWY?si=vSiIPkjHhGpJX0it'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/ry_8lmQHzWY?si=vSiIPkjHhGpJX0it" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<p><%=link_to' ','https://youtu.be/m34DPnRUfMU?si=EwN43yJ-eJHamBhf'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/m34DPnRUfMU?si=EwN43yJ-eJHamBhf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<p><%=link_to' ','https://youtu.be/xGbxsiBZGPI?si=0WPrFae2FtgSIVDr'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/xGbxsiBZGPI?si=0WPrFae2FtgSIVDr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+<% when ["2", "1", "2", "2"] %>
+<h6>恋愛ソング</h6>
+<p>おすすめの曲</p>
+<div class="douga">
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/Euf1-3WRino?si=BpgqlrR7uYzB5H_Y'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/Euf1-3WRino?si=BpgqlrR7uYzB5H_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/naz0-szzYXk?si=SuP6SwJijIvZc7cA'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/naz0-szzYXk?si=SuP6SwJijIvZc7cA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/U8pJgoOhiDs?si=Hkgq6ysbs0xzPtB8'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/U8pJgoOhiDs?si=Hkgq6ysbs0xzPtB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/T8y_RsF4TSw?si=kTPggq7BRo-feOZz'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/T8y_RsF4TSw?si=kTPggq7BRo-feOZz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+<% when ["2", "2", "1", "1"] %>
+<h6>励まされる曲</h6>
+<p>おすすめの曲</p>
+<div class="douga">
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/zhCtzmDWsN0?si=M1cEi0z_FAGQp9wB'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/zhCtzmDWsN0?si=mU9wW1qu7n9jEA2n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/cpIa89_rZoA?si=QYPMRvMc1VY6eccI'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/cpIa89_rZoA?si=QYPMRvMc1VY6eccI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/DwTinTO0o9I?si=8k1b8ZIo-_Z0I8pX'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/DwTinTO0o9I?si=8k1b8ZIo-_Z0I8pX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/VZBU8LvZ91Q?si=MlIZDRsDhH3XuRG3'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/VZBU8LvZ91Q?si=MlIZDRsDhH3XuRG3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+<% when ["2", "2", "1", "2"] %>
+<h6>恋愛ソング</h6>
+<p>おすすめの曲</p>
+<div class="douga">
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/Euf1-3WRino?si=BpgqlrR7uYzB5H_Y'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/Euf1-3WRino?si=BpgqlrR7uYzB5H_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/naz0-szzYXk?si=SuP6SwJijIvZc7cA'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/naz0-szzYXk?si=SuP6SwJijIvZc7cA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/U8pJgoOhiDs?si=Hkgq6ysbs0xzPtB8'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/U8pJgoOhiDs?si=Hkgq6ysbs0xzPtB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/T8y_RsF4TSw?si=kTPggq7BRo-feOZz'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/T8y_RsF4TSw?si=kTPggq7BRo-feOZz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+<% when ["2", "2", "2", "1"] %>
+<h6>励まされる曲</h6>
+<p>おすすめの曲</p>
+<div class="douga">
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/zhCtzmDWsN0?si=M1cEi0z_FAGQp9wB'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/zhCtzmDWsN0?si=mU9wW1qu7n9jEA2n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/cpIa89_rZoA?si=QYPMRvMc1VY6eccI'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/cpIa89_rZoA?si=QYPMRvMc1VY6eccI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/DwTinTO0o9I?si=8k1b8ZIo-_Z0I8pX'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/DwTinTO0o9I?si=8k1b8ZIo-_Z0I8pX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/VZBU8LvZ91Q?si=MlIZDRsDhH3XuRG3'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/VZBU8LvZ91Q?si=MlIZDRsDhH3XuRG3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+<% when ["2", "2", "2", "2"] %>
+<h6>恋愛ソング</h6>
+<p>おすすめの曲</p>
+<div class="douga">
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/Euf1-3WRino?si=BpgqlrR7uYzB5H_Y'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/Euf1-3WRino?si=BpgqlrR7uYzB5H_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/naz0-szzYXk?si=SuP6SwJijIvZc7cA'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/naz0-szzYXk?si=SuP6SwJijIvZc7cA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/U8pJgoOhiDs?si=Hkgq6ysbs0xzPtB8'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/U8pJgoOhiDs?si=Hkgq6ysbs0xzPtB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="minidouga">
+<%=link_to' ','https://youtu.be/T8y_RsF4TSw?si=kTPggq7BRo-feOZz'%>
+<iframe width="180" height="180" src="https://www.youtube.com/embed/T8y_RsF4TSw?si=kTPggq7BRo-feOZz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+<% end %>
+</div>
+</div>

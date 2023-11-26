@@ -1,3 +1,179 @@
 // Place all the styles related to the songs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.toukou input[type="text"] {
+   
+    border-style: none;
+    box-sizing: border-box;
+    width: 600px;
+    height: 60px;
+    padding-right: 1000;
+
+}
+.search{
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    font-size: px;
+}
+
+.toukou{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.sinki{
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: xx-large;
+    border: 1px solid #fff;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.field2{
+    margin-right: 100px;
+    display: flex;
+}
+.field1{
+    margin-right: 0px;
+    display: flex;
+
+}
+.field3{
+    margin-right: 50px;
+    padding-left: 49px;
+}
+
+
+.field4{
+
+
+}
+.field5{
+    
+
+}
+
+.field3 label{
+    margin-right: 102px;
+}
+
+.field4 label{
+    margin-right: 260px;
+}
+
+.field5 label{
+    margin-right: 30px;
+    
+
+}
+.field2 label{
+    margin-left: 84px;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    width: 355px;
+}
+
+.field1 label{
+    //background-color: #07d819;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    margin-left: 84px;
+    width: 355px;
+
+}
+
+.orikaesi{
+  
+    flex-wrap: wrap;
+    width: 29%;
+    height: 300px;
+    border: 1px solid #fff;
+    position: relative;
+}
+.song{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.rankingu{
+    padding-top: 100px;
+    justify-content: center;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.page{
+    padding-top: 100px;
+    justify-content: center;
+    text-align: center;
+}
+
+.tikatika{
+    display: flex;
+    gap: 10px;
+    
+}
+
+
+li{
+    list-style: none;
+}
+
+
+
+.font0 body{
+    font-size: x-large;
+}
+
+
+.sindanurl{
+    width: 100px;
+    height: 100px;
+    border-radius: 90px;
+    cursor :pointer;
+    float: left;
+    background-image: url('rogo.png');
+    background-size: cover;
+    padding: 5px;
+    margin-right: 50px;
+}
+
+
+.image1{
+border: 1px solid #07d819;
+
+
+}
+
+
+.image2{
+    border: 1px solid #07d819;
+    
+}
+
+.image3{
+    border: 1px solid #07d819;
+    
+}
+
+
+.irasuto{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+}
+
+.aoiti{
+    margin-top: 50px;
+}
